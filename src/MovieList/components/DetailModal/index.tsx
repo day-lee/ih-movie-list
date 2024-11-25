@@ -44,7 +44,7 @@ const DetailModal: React.FC<Props> = ({
       <div
         className="fixed top-0 sm:top-20 sm:left-1/2 sm:transform sm:-translate-x-1/2 
          flex flex-col sm:mx-20 z-30 bg-white
-         overflow-y-auto max-w-[400px] max-h-[900px] py-4 scroll-smooth"
+         overflow-y-auto max-w-[400px] h-[700px] max-h-[900px] py-4 scroll-smooth"
         role="dialog"
         aria-labelledby="dialog-title"
       >
