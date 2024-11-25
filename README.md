@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# IH Movie List
+A simple project to display a list of movies using a public API.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Setup the project locally
+Follow these steps to set up the project on your local machine:
+1. Clone the repository
+```
+git clone https://github.com/day-lee/ih-movie-list.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+3. Install dependancy
 ```
+cd ih-movie-list
+npm install
+```
+
+4. Create an `.env` file
+In the root of the project directory, create a file `.env`  
+add the following variables 
+```
+VITE_API_KEY=<provided-api-key>
+VITE_APP_AUTH_TOKEN=<provided-token>
+```
+
+6. Start the development server
+```
+npm run dev
+```
+
+## Additional Information
+### Technologies Used:
+- React (Vite)
+- TypeScript
+- Tailwind CSS
+- Axios 
+
+### Features:
+
+- Displays a list of popular movies retrieved from The Movie Database (TMDB) API.
+- Shows a movie details in a modal. 
+- Allows searching, filtering, and sorting of movies.
+- Responsive and acceesible design for mobile and desktop devices.
+
+### Brief explanation of my apporach
+- I used useReducer to manage the state, as it’s great for handling more complex state updates.
+- I added loading and error handling, along with messages for better user experience
+- I kept the code modular by splitting it into four components: Header, Main, FilterBox, and DetailModal.  
+This makes the project easier to read, maintain, and update.
