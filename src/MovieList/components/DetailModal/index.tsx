@@ -1,7 +1,7 @@
 import { Movie } from "../types";
 
 const genres = new Map([
-  [16, "Animationtion"],
+  [16, "Animation"],
   [28, "Action"],
   [18, "Drama"],
   [27, "Horror"],
